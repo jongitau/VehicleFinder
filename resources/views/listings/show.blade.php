@@ -16,8 +16,8 @@
             class="w-48 mr-6 mb-6"
             src="{{asset('images/no-image.png')}}" alt="">
 
-        <h3 class="text-2xl mb-2">{{$listings->title}}</h3>
-        <div class="text-xl font-bold mb-4">{{$listings->company}}</div>
+        <h3 class="text-2xl mb-2">{{$listing->title}}</h3>
+        <div class="text-xl font-bold mb-4">{{$listing->company}}</div>
         <ul class="flex">
             <li
                 class="bg-black text-white rounded-xl px-3 py-1 mr-2"
@@ -41,16 +41,16 @@
             </li>
         </ul>
         <div class="text-lg my-4">
-            <i class="fa-solid fa-location-dot"></i>{{$listings->location}}</div>
+            <i class="fa-solid fa-location-dot"></i>{{$listing->location}}</div>
         <div class="border border-gray-200 w-full mb-6"></div>
         <div>
             <h3 class="text-3xl font-bold mb-4">
-               {{$listings->tags}}
+               {{$listing->tags}}
             </h3>
             <div class="text-lg space-y-6">
-             {{$listings->Description}}
+             {{$listing->Description}}
                 <a
-                    href="mailto:{{$listings->email}}"
+                    href="mailto:{{$listing->email}}"
                     class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80"
                     ><i class="fa-solid fa-envelope"></i>
                     Contact underwriter</a

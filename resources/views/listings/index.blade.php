@@ -27,6 +27,28 @@
            </h3>
            <div class="text-xl font-bold mb-4">{{$listing->company}}</div>
 
+           <ul class="flex">
+            <li
+                class="bg-black text-white rounded-xl px-3 py-1 mr-2"
+            >
+                <a href="#">Accident History</a>
+            </li>
+            <li
+                class="bg-black text-white rounded-xl px-3 py-1 mr-2"
+            >
+                <a href="#">Maintenance History</a>
+            </li>
+            <li
+                class="bg-black text-white rounded-xl px-3 py-1 mr-2"
+            >
+                <a href="#">Driver History</a>
+            </li>
+            <li
+                class="bg-black text-white rounded-xl px-3 py-1 mr-2"
+            >
+                <a href="#">Ownership History</a>
+            </li>
+        </ul>
            <div class="text-lg mt-4">
                <i class="fa-solid fa-location-dot"></i> {{$listing->location}}
            </div>
