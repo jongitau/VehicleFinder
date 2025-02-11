@@ -36,7 +36,7 @@
             <li
                 class="bg-black text-white rounded-xl px-3 py-1 mr-2"
             >
-                <a href="#">Maintenance History</a>
+                <a href="#">Maintenance Historys</a>
             </li>
             <li
                 class="bg-black text-white rounded-xl px-3 py-1 mr-2"
