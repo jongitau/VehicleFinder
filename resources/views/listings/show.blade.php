@@ -32,12 +32,12 @@
             <li
                 class="bg-black text-white rounded-xl px-3 py-1 mr-2"
             >
-                <a href="#">Driver History</a>
+                <a href="#">Driver Historssy</a>
             </li>
             <li
                 class="bg-black text-white rounded-xl px-3 py-1 mr-2"
             >
-                <a href="#">Ownership Hi</a>
+                <a href="#">Ownership History</a>
             </li>
         </ul>
         <div class="text-lg my-4">
@@ -55,18 +55,26 @@
                     ><i class="fa-solid fa-envelope"></i>
                     Contact underwriter</a
                 >
-
                 <a
-                    href="https://test.com"
+                    href="https://iba.co.ke"
                     target="_blank"
                     class="block bg-black text-white py-2 rounded-xl hover:opacity-80"
-                    ><i class="fa-solid fa-globe"></i> Visit
-                    Website</a
-                >
+                    ><i class="fa-solid fa-globe"></i> Visit Website</a>
             </div>
         </div>
     </div>
 </div>
 </div>
+<x-card class="mt-4 p-2 flex space-x-6">
+    <a href="/listings/{{$listing->id}}/edit">
+        <i class="fa-solid fa-pencil"></i>Edit
+    </a>  
 
+    <form method="POST" action="/listings/{{$listing->id}}">
+      @csrf
+      @method('DELETE')  
+      <button class="text-red-500"><i class="fa-solid fa-trash"></i>DELETE</button>
+    </form>
+        
+</x-card>     
 @endsection
