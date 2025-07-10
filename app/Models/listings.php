@@ -9,7 +9,7 @@ class listings extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','company','location','tags'];
+    protected $fillable = ['title','company','location','tags', 'email', 'website', 'description'];
 
     public function scopeFilter($query, array $filters)
     {
@@ -23,7 +23,7 @@ class listings extends Model
             ->orWhere('tags', 'like', '%'. request('search').'%')
             ->orWhere('company', 'like', '%'. request('search').'%')
             ->orWhere('location', 'like', '%'. request('search').'%')
-            
+
             ;
         }
     }

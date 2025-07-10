@@ -4,8 +4,8 @@
 
 @include('partials._search')
 
-<a href="/" class="inline-block text-black ml-4 mb-4"
-><i class="fa-solid fa-arrow-left"></i> Back
+<a href="{{ route('landing') }}" class="inline-block text-black ml-4 mb-4"
+><i class="fa-solid fa-arrow-left"></i> Back to listings
 </a>
 <div class="mx-4">
 <div class="bg-gray-50 border border-gray-200 p-10 rounded">
@@ -66,15 +66,15 @@
 </div>
 </div>
 <x-card class="mt-4 p-2 flex space-x-6">
-    <a href="/listings/{{$listing->id}}/edit">
+    <a href="{{ route('listings.edit', $listing->id) }}" class="text-blue-500">
         <i class="fa-solid fa-pencil"></i>Edit
-    </a>  
+    </a>
 
-    <form method="POST" action="/listings/{{$listing->id}}">
+    <form method="POST" action="{{ route('listings.destroy', $listing->id) }}">
       @csrf
-      @method('DELETE')  
+      @method('DELETE')
       <button class="text-red-500"><i class="fa-solid fa-trash"></i>DELETE</button>
     </form>
-        
-</x-card>     
+
+</x-card>
 @endsection
